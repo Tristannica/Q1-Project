@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Eclipse Viewer</title>
+        <meta charset="UTF-8">
+        <link href="new.css" rel="stylesheet">
+
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    </head>
+
+    <body>
+
+<!-- START TABS -->
+    <nav class="nav-extended">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">ECLIPSE VIEWER</a>
+        </div>
+        <div class="nav-content">
+          <ul class="tabs tabs-transparent">
+            <li class="tab"><a class="active" href="#100">View (Total)</a></li>
+            <li class="tab"><a href="#90">View (90%)</a></li>
+            <li class="tab"><a href="#75">View (75%)</a></li>
+            <li class="tab"><a href="#50">View (50%)</a></li>
+            <li class="tab"><a href="#25">View (25%)</a></li>
+          </ul>
+        </div>
+    </nav>
+<!-- END TABS -->
+
+<!-- START COUNTDOWN -->
+    <div class="clock">
+      <div id="clockdiv">
+        <div>
+          <span class="days"></span>
+          <div class="smalltext">DAYS</div>
+        </div>
+        <div>
+          <span class="hours"></span>
+          <div class="smalltext">HOURS</div>
+        </div>
+        <div>
+          <span class="minutes"></span>
+          <div class="smalltext">MINUTES</div>
+        </div>
+        <div>
+          <span class="seconds"></span>
+          <div class="smalltext">SECONDS</div>
+        </div>
+      </div>
+    </div>
+
+    <!--Google Map Element-->
+    <div id="map"></div>
+
+
+    <!--Import Google Maps API-->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCta04IgPSYrvVw5T3ffqMAMbYyhIupuII&callback=initMap">
+    </script>
+
+    <!--Import jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+    <!--Main JavaScript -->
+    <script src="new.js"></script>
+
+    </body>
+</html>

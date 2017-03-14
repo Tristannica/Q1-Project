@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <script>"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"</script>
+        <title>Total Eclipse</title>
+        <script src='https://api.mapbox.com/mapbox-gl-js/v0.33.1/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v0.33.1/mapbox-gl.css' rel='stylesheet' />
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <div id='map' style='width: 500px; height: 300px;'></div>
+        <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoidHJpc3Rhbm5pY2EiLCJhIjoieUhkQjdXRSJ9.Oed9lyoMW4UsOkWDnDyaog';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/tristannica/cj08hnhuh00112sn5gv1sehf5'
+        });
+        </script>
+
+        <!--audio link to total eclipse - dan band-->
+        <script src="script.js"></script>
+    </body>
+</html>

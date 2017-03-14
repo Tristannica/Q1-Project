@@ -1,0 +1,66 @@
+
+body {
+	background: #00816A;
+}
+
+.nav-extended{
+	background: #00816A;
+}
+
+.nav-wrapper{
+	background: #002e4c;
+	margin: 0;
+}
+
+.nav-content{
+	background: #035177;
+	margin: 0.3em;
+}
+
+#test1{
+	color: #0360b2;
+}
+
+#map {
+	height: 90%;
+	margin: 0.5em;
+	padding: 1em;
+}
+
+.clock{
+	display: flex;
+	flex-direction: row-reverse;
+	text-align: right;
+	background: #002e4c;
+	font-family: sans-serif;
+	font-weight: 100;
+	padding: 0.3em;
+}
+
+#clockdiv{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 15px;
+}
+
+#clockdiv > div{
+	padding: 10px;
+	border-radius: 3px;
+	background: #00BF96;
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 5px;
+	border-radius: 3px;
+	background: #00816A;
+	display: inline-block;
+}
+
+.smalltext{
+	padding-top: 2px;
+	font-size: 8px;
+}
