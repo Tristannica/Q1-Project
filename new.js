@@ -47,6 +47,14 @@ initializeClock('clockdiv', deadline);
 
 //COUNTDOWN CLOCK END
 
+
+
+//MAAAAAPS
+
+//BEGIN MAP EVENT HANDLING
+
+
+//INITIALIZE MAP
 function initMap() {
   // Styles a map in night mode.
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -134,6 +142,8 @@ function initMap() {
       }
     ]
   });
+
+
 }
 
 //START GOOGLE MAPS SCRIPT
