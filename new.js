@@ -87,7 +87,7 @@ function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 40, lng: -100},
     scrollwheel: false,
-    zoom: 4,
+    zoom: 5,
     styles: [
       {elementType: 'geometry', stylers: [{color: '#282725'}]},
       {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
@@ -171,8 +171,7 @@ function initMap() {
   });
 }
 
-
-
+//API Search Function
 
 $(document).ready(function() {
  $("button").click(function() {
