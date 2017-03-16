@@ -171,11 +171,41 @@ function initMap() {
   });
 }
 
-var city = "Potomac"
-var state = "MD"
 
-function checkLocation(city, state){
-  var url ="http://api.usno.navy.mil/eclipses/solar?date=8/21/2017&loc=" + city + ", " + state + "&height=117&format=json"
+
+
+$(document).ready(function() {
+ $("button").click(function() {
+   checkLocation()
+ })
+})
+
+//var city = "Potomac"
+//var state = "MD"
+var loc = "Denver, CO"
+
+
+function checkLocation(loc){
+  //var url ="http://api.usno.navy.mil/eclipses/solar?date=8/21/2017&loc=" + city + ", " + state + "&height=117&format=json"
+    var url ="http://api.usno.navy.mil/eclipses/solar?date=8/21/2017&loc=" + loc + "&height=117&format=json"
+
+    if ($("input").val() !=="") {
+     var url = "http://pokeapi.co/api/v2/pokemon/"
+     url += $("input").val()
+     $.get(url)
+     .then(function(data) {
+       var name = data.name
+       var img = data.sprites.front_shiny
+       updatePage(name, img)
+       showMessage()
+     })
+     .catch(function(error) {
+       console.log(error);
+     })
+   } else {
+     alert("That's not an available location!")
+   }
+}
 
   $.get(url).then(function(data){
     console.log(data.description)
@@ -222,7 +252,8 @@ function checkLocation(city, state){
 
 
 
-console.log(checkLocation(city, state))
+
+console.log(checkLocation(loc))
 
 
 
