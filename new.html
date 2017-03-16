@@ -49,12 +49,11 @@
     <div class="statebuttons1">
         <input type="button" value="GA" onclick="window.open('file:///Users/tristannica/Desktop/Galvanize/Q1%20Project/EclipseStatesMaps/ga.jpg');" class="newButton"/>
         <input type="button" value="IA" onclick="window.open('file:///Users/tristannica/Desktop/Galvanize/Q1%20Project/EclipseStatesMaps/ia.jpg');" class="newButton"/>
-        <input type="button" value="ID" onclick="window.open('file:///Users/tristannica/Desktop/Galvanize/Q1%20Project/EclipseStatesMaps/id.jpg');" class="newButton"/>            <input type="button" value="IL" onclick="window.open('file:///Users/tristannica/Desktop/Galvanize/Q1%20Project/EclipseStatesMaps/il.jpg');" class="newButton"/>
+        <input type="button" value="ID" onclick="window.open('file:///Users/tristannica/Desktop/Galvanize/Q1%20Project/EclipseStatesMaps/id.jpg');" class="newButton"/>
+        <input type="button" value="IL" onclick="window.open('file:///Users/tristannica/Desktop/Galvanize/Q1%20Project/EclipseStatesMaps/il.jpg');" class="newButton"/>
         <input type="button" value="KS" onclick="window.open('file:///Users/tristannica/Desktop/Galvanize/Q1%20Project/EclipseStatesMaps/ks.jpg');" class="newButton"/>
         <input type="button" value="KY" onclick="window.open('file:///Users/tristannica/Desktop/Galvanize/Q1%20Project/EclipseStatesMaps/ky.jpg');" class="newButton"/>
-        <input type="button" value="MO" onclick="window.open('file:///Users/tristannica/Desktop/Galvanize/Q1%20Project/EclipseStatesMaps/mo.jpg');" class="newButton"/>        </div>
-    </div>
-    <div class="statebuttons2">
+        <input type="button" value="MO" onclick="window.open('file:///Users/tristannica/Desktop/Galvanize/Q1%20Project/EclipseStatesMaps/mo.jpg');" class="newButton"/>
         <input type="button" value="MT" onclick="window.open('file:///Users/tristannica/Desktop/Galvanize/Q1%20Project/EclipseStatesMaps/mt.jpg');" class="newButton"/>
         <input type="button" value="NC" onclick="window.open('file:///Users/tristannica/Desktop/Galvanize/Q1%20Project/EclipseStatesMaps/nc.jpg');" class="newButton"/>
         <input type="button" value="NE" onclick="window.open('file:///Users/tristannica/Desktop/Galvanize/Q1%20Project/EclipseStatesMaps/ne.jpg');" class="newButton"/>
@@ -87,39 +86,10 @@
       </div>
     </div>
 
-    <script>
-    var end = new Date('08/21/2017 9:34 AM');
 
-        var _second = 1000;
-        var _minute = _second * 60;
-        var _hour = _minute * 60;
-        var _day = _hour * 24;
-        var timer;
-
-        function showRemaining() {
-            var now = new Date();
-            var distance = end - now;
-            if (distance < 0) {
-
-                clearInterval(timer);
-                document.getElementById('countdown').innerHTML = 'EXPIRED!';
-
-                return;
-            }
-            var days = Math.floor(distance / _day);
-            var hours = Math.floor((distance % _day) / _hour);
-            var minutes = Math.floor((distance % _hour) / _minute);
-            var seconds = Math.floor((distance % _minute) / _second);
-
-            document.getElementById('countdown').innerHTML = days + 'days ';
-            document.getElementById('countdown').innerHTML += hours + 'hrs ';
-            document.getElementById('countdown').innerHTML += minutes + 'mins ';
-            document.getElementById('countdown').innerHTML += seconds + 'secs';
-        }
-
-        timer = setInterval(showRemaining, 1000);
-    </script>
+<!-- START FIXED COUNTDOWN -->
     <div id="countdown"></div>
+<!-- END FIXED COUNTDOWN -->
 
 <!-- START ECLIPSE DATA -->
 
