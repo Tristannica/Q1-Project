@@ -184,7 +184,6 @@ $(document).ready(function() {
 //var state = "MD"
 //var loc = "Denver, CO"
 
-
 function checkLocation(){
     if ($("input").val() !=="") {
      //var url ="http://api.usno.navy.mil/eclipses/solar?date=8/21/2017&loc=" + city + ", " + state + "&height=117&format=json"

@@ -123,6 +123,16 @@ body {
 }
 
 .searchbutton{
-	background-color: #000;
+	display: flex;
+	flex-direction: row;
+	background-color: #fff;
 }
 
+.statebuttons{
+	display: flex;
+	flex-direction: row;
+	background: #d6d0e8;
+	float: right;
+	margin: 0.3em;
+	padding: 0.1em;
+}
