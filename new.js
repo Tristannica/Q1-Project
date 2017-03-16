@@ -182,23 +182,55 @@ $(document).ready(function() {
 
 //var city = "Potomac"
 //var state = "MD"
-var loc = "Denver, CO"
+//var loc = "Denver, CO"
 
 
-function checkLocation(loc){
-  //var url ="http://api.usno.navy.mil/eclipses/solar?date=8/21/2017&loc=" + city + ", " + state + "&height=117&format=json"
-    var url ="http://api.usno.navy.mil/eclipses/solar?date=8/21/2017&loc=" + loc + "&height=117&format=json"
-
+function checkLocation(){
     if ($("input").val() !=="") {
-     var url = "http://pokeapi.co/api/v2/pokemon/"
-     url += $("input").val()
-     $.get(url)
-     .then(function(data) {
-       var name = data.name
-       var img = data.sprites.front_shiny
-       updatePage(name, img)
-       showMessage()
-     })
+     //var url ="http://api.usno.navy.mil/eclipses/solar?date=8/21/2017&loc=" + city + ", " + state + "&height=117&format=json"
+    var url ="http://api.usno.navy.mil/eclipses/solar?date=8/21/2017&loc=" + $("input").val() + "&height=117&format=json"
+    url += $("input").val()
+       $.get(url).then(function(data){
+        console.log(data.description)
+        console.log(data.city)
+        console.log(data.state)
+        console.log(data.lat)
+        console.log(data.lon)
+        console.log(data.local_data[0].phenomenon)
+        console.log(data.local_data[0].time)
+        console.log(data.local_data[0].altitude)
+        console.log(data.local_data[0].azimuth)
+        console.log(data.local_data[1].phenomenon)
+        console.log(data.local_data[1].time)
+        console.log(data.local_data[1].altitude)
+        console.log(data.local_data[1].azimuth)
+        console.log(data.local_data[2].phenomenon)
+        console.log(data.local_data[2].time)
+        console.log(data.local_data[2].altitude)
+        console.log(data.local_data[2].azimuth)
+        console.log(data.obscuration)
+        console.log(data.duration)
+
+        $('.description').text(data.description)
+        $('.city').text(data.city)
+        $('.state').text(data.state)
+        $('.lat').text(Math.floor(data.lat))
+        $('.lon').text(Math.floor(data.lon))
+        $('.start0').text(data.local_data[0].phenomenon)
+        $('.time0').text(data.local_data[0].time)
+        $('.altitude0').text(data.local_data[0].altitude)
+        $('.azimuth0').text(data.local_data[0].azimuth)
+        $('.start1').text(data.local_data[1].phenomenon)
+        $('.time1').text(data.local_data[1].time)
+        $('.altitude1').text(data.local_data[1].altitude)
+        $('.azimuth1').text(data.local_data[1].azimuth)
+        $('.start2').text(data.local_data[2].phenomenon)
+        $('.time2').text(data.local_data[2].time)
+        $('.altitude2').text(data.local_data[2].altitude)
+        $('.azimuth2').text(data.local_data[2].azimuth)
+        $('.obscuration').text(data.obscuration)
+        $('.duration').text(data.duration)
+      })
      .catch(function(error) {
        console.log(error);
      })
@@ -207,53 +239,7 @@ function checkLocation(loc){
    }
 }
 
-  $.get(url).then(function(data){
-    console.log(data.description)
-    console.log(data.city)
-    console.log(data.state)
-    console.log(data.lat)
-    console.log(data.lon)
-    console.log(data.local_data[0].phenomenon)
-    console.log(data.local_data[0].time)
-    console.log(data.local_data[0].altitude)
-    console.log(data.local_data[0].azimuth)
-    console.log(data.local_data[1].phenomenon)
-    console.log(data.local_data[1].time)
-    console.log(data.local_data[1].altitude)
-    console.log(data.local_data[1].azimuth)
-    console.log(data.local_data[2].phenomenon)
-    console.log(data.local_data[2].time)
-    console.log(data.local_data[2].altitude)
-    console.log(data.local_data[2].azimuth)
-    console.log(data.obscuration)
-    console.log(data.duration)
-
-    $('.description').text(data.description)
-    $('.city').text(data.city)
-    $('.state').text(data.state)
-    $('.lat').text(Math.floor(data.lat))
-    $('.lon').text(Math.floor(data.lon))
-    $('.start0').text(data.local_data[0].phenomenon)
-    $('.time0').text(data.local_data[0].time)
-    $('.altitude0').text(data.local_data[0].altitude)
-    $('.azimuth0').text(data.local_data[0].azimuth)
-    $('.start1').text(data.local_data[1].phenomenon)
-    $('.time1').text(data.local_data[1].time)
-    $('.altitude1').text(data.local_data[1].altitude)
-    $('.azimuth1').text(data.local_data[1].azimuth)
-    $('.start2').text(data.local_data[2].phenomenon)
-    $('.time2').text(data.local_data[2].time)
-    $('.altitude2').text(data.local_data[2].altitude)
-    $('.azimuth2').text(data.local_data[2].azimuth)
-    $('.obscuration').text(data.obscuration)
-    $('.duration').text(data.duration)
-  })
-}
-
-
-
-
-console.log(checkLocation(loc))
+console.log(checkLocation())
 
 
 
