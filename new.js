@@ -49,7 +49,34 @@ initializeClock('clockdiv', deadline);
 
 
 
-//MAAAAAPS
+//MAP ELEMENTS
+/*
+  //Eclipse Path Plot Data
+  //<![CDATA[
+  var elements = new Array(
+  2457987.26852, 18.0, -3.0, 3.0,   68.8,   68.8,
+   -0.12957101,   0.54064262,  -0.00002940,  -0.00000810,
+    0.48541600,  -0.14163999,  -0.00009050,   0.00000205,
+   11.86695957,  -0.01362200,  -0.00000200,
+   89.24542999,  15.00393963,   0.00000000,
+    0.54209298,   0.00012410,  -0.00001180,
+   -0.00402500,   0.00012340,  -0.00001170,
+    0.00462220,   0.00459920
+  );
+
+  var eclipseInfos = "TSE&nbsp;2017&nbsp;General&nbsp;Circumstances:</span>";
+  eclipseInfos += "<ul type=\"square\">";
+  eclipseInfos += "<li>Type:&nbsp;Total</li>";
+  eclipseInfos += "<li>Date:&nbsp;2017 August 21</li>";
+  eclipseInfos += "<li>Time:&nbsp;18:25:31.4&nbsp;UT</li>";
+  eclipseInfos += "<li>Magnitude:&nbsp;1.03060</li>";
+  eclipseInfos += "<li>Gamma:&nbsp;0.43671</li>";
+  eclipseInfos += "<li>Saros:&nbsp;145</li>";
+  eclipseInfos += "<li>Max.&nbsp;Duration:&nbsp;02m40s</li>";
+  eclipseInfos += "<li>&Delta;T:&nbsp;68.8s &mdash; &sigma; = &plusmn;2s [&plusmn;0.0&deg;]</li>";
+  //]]>
+
+*/
 
 //BEGIN MAP EVENT HANDLING
 
@@ -142,9 +169,62 @@ function initMap() {
       }
     ]
   });
-
-
 }
+
+var city = "Denver"
+var state = "CO"
+
+function checkLocation(city, state){
+  var url ="http://api.usno.navy.mil/eclipses/solar?date=8/21/2017&loc=" + city + ", " + state + "&height=117&format=json"
+
+  $.get(url).then(function(data){
+    console.log(data.description)
+    console.log(data.city)
+    console.log(data.state)
+    console.log(data.lat)
+    console.log(data.lon)
+    console.log(data.local_data[0].phenomenon)
+    console.log(data.local_data[0].time)
+    console.log(data.local_data[0].altitude)
+    console.log(data.local_data[0].azimuth)
+    console.log(data.local_data[1].phenomenon)
+    console.log(data.local_data[1].time)
+    console.log(data.local_data[1].altitude)
+    console.log(data.local_data[1].azimuth)
+    console.log(data.local_data[2].phenomenon)
+    console.log(data.local_data[2].time)
+    console.log(data.local_data[2].altitude)
+    console.log(data.local_data[2].azimuth)
+    console.log(data.obscuration)
+    console.log(data.duration)
+
+    $('.description').text(data.description)
+    $('.city').text(data.city)
+    $('.state').text(data.state)
+    $('.lat').text(Math.floor(data.lat))
+    $('.lon').text(Math.floor(data.lon))
+    $('.start0').text(data.local_data[0].phenomenon)
+    $('.time0').text(data.local_data[0].time)
+    $('.altitude0').text(data.local_data[0].altitude)
+    $('.azimuth0').text(data.local_data[0].azimuth)
+    $('.start1').text(data.local_data[1].phenomenon)
+    $('.time1').text(data.local_data[1].time)
+    $('.altitude1').text(data.local_data[1].altitude)
+    $('.azimuth1').text(data.local_data[1].azimuth)
+    $('.start2').text(data.local_data[2].phenomenon)
+    $('.time2').text(data.local_data[2].time)
+    $('.altitude2').text(data.local_data[2].altitude)
+    $('.azimuth2').text(data.local_data[2].azimuth)
+    $('.obscuration').text(data.obscuration)
+    $('.duration').text(data.duration)
+  })
+}
+
+
+
+console.log(checkLocation(city, state))
+
+
 
 //START GOOGLE MAPS SCRIPT
 /*var map;

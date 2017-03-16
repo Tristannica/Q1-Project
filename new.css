@@ -1,6 +1,6 @@
 
 body {
-	background: #00816A;
+	background: #002e4c;
 }
 
 .nav-extended{
@@ -63,4 +63,43 @@ body {
 .smalltext{
 	padding-top: 2px;
 	font-size: 8px;
+}
+
+.events{
+	display: flex;
+	flex-direction: row;
+}
+
+.event0{
+	display: flex;
+	flex-direction: column;
+	background: #d6d0e8;
+	padding: 0.3em;
+	margin: 0.3em;
+}
+
+.event1{
+	display: flex;
+	flex-direction: column;
+	background: #d6d0e8;
+	padding: 0.3em;
+	margin: 0.3em;
+}
+
+.event2{
+	display: flex;
+	flex-direction: column;
+	background: #d6d0e8;
+	padding: 0.3em;
+	margin: 0.3em;
+}
+
+.datacontainer{
+	display: flex;
+	flex-direction: row;
+	text-align: left;
+	background: #2800a3;
+	font-family: sans-serif;
+	font-weight: 100;
+	padding: 0.3em;
 }
