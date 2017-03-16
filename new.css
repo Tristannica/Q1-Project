@@ -63,6 +63,7 @@ body {
 .smalltext{
 	padding-top: 2px;
 	font-size: 8px;
+	color: white;
 }
 
 .events{
@@ -102,4 +103,21 @@ body {
 	font-family: sans-serif;
 	font-weight: 100;
 	padding: 0.3em;
+}
+
+
+.transit{
+	display: flex;
+	flex-direction: column;
+	background: #d6d0e8;
+	padding: 0.3em;
+	margin: 0.3em;
+}
+
+.location{
+	display: flex;
+	flex-direction: column;
+	background: #d6d0e8;
+	padding: 0.3em;
+	margin: 0.3em;
 }

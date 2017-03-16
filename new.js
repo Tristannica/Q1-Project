@@ -171,8 +171,8 @@ function initMap() {
   });
 }
 
-var city = "Denver"
-var state = "CO"
+var city = "Potomac"
+var state = "MD"
 
 function checkLocation(city, state){
   var url ="http://api.usno.navy.mil/eclipses/solar?date=8/21/2017&loc=" + city + ", " + state + "&height=117&format=json"
