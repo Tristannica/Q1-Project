@@ -42,7 +42,7 @@ function initializeClock(id, endtime) {
   var timeinterval = setInterval(updateClock, 1000);
 }
 
-var deadline = new Date(Date.parse(new Date()) + 156 * 24 * 60 * 60 * 1000);
+var deadline = new Date(158 * 24 * 60 * 60 * 1000 + Date.parse(new Date()));
 initializeClock('clockdiv', deadline);
 
 //COUNTDOWN CLOCK END
@@ -169,7 +169,26 @@ function initMap() {
       }
     ]
   });
+
+  function markerLocation(){
+  if ($("input").val() !==""){
+
+    var marker = new google.maps.Marker({
+    position: $("input").val(),
+    map: map
+    })
+  }
 }
+}
+
+$(document).ready(function() {
+ $("button").click(function() {
+   markerLocation()
+ })
+})
+
+
+
 
 //API Search Function
 
@@ -185,6 +204,7 @@ $(document).ready(function() {
 
 function checkLocation(){
     if ($("input").val() !=="") {
+
      //var url ="http://api.usno.navy.mil/eclipses/solar?date=8/21/2017&loc=" + city + ", " + state + "&height=117&format=json"
     var url ="http://api.usno.navy.mil/eclipses/solar?date=8/21/2017&loc=" + $("input").val() + "&height=117&format=json"
     url += $("input").val()
@@ -228,6 +248,8 @@ function checkLocation(){
         $('.azimuth2').text(data.local_data[2].azimuth)
         $('.obscuration').text(data.obscuration)
         $('.duration').text(data.duration)
+
+
       })
      .catch(function(error) {
        console.log(error);

@@ -150,3 +150,11 @@ body {
 	margin-right: auto;
 	background: #d6d0e8;
 }
+
+#countdown{
+	display: flex;
+	flex-direction: row;
+	background: #d6d0e8;
+	padding: 0.3em;
+	margin: 0.3em;
+}
