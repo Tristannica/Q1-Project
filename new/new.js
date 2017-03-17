@@ -45,6 +45,8 @@ function initializeClock(id, endtime) {
 var deadline = new Date(158 * 24 * 60 * 60 * 1000 + Date.parse(new Date()));
 initializeClock('clockdiv', deadline);
 
+
+
 //COUNTDOWN CLOCK END
 
 //START FIXED COUNTDOWN
