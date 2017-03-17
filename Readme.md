@@ -15,7 +15,8 @@ This web application is deployed using Surge and can be found at:
 
 ## Acknowledgments
 
-* A special thanks to Xavier Jubier for a well-constructed & user-friendly eclipse map. 
+#### A special thanks to:
+* Xavier Jubier for a well-constructed & user-friendly eclipse map. 
 * The NASA Goddard Space Flight Center's visualization and public outreach teams.
-* To the United States Naval Observatory for their publically accessible solar events/data API.
+* The United States Naval Observatory for their publically accessible solar events/data API.
 
