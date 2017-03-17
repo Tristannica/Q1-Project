@@ -33,10 +33,13 @@
     </nav>
 <!-- END TABS -->
 
+
+
+<!--
 <div id="xjubier">
     <a rel="" href="http://xjubier.free.fr/en/site_pages/solar_eclipses/TSE_2017_GoogleMapFull.html">xjubier</a>
 </div>
-
+-->
 
 <!-- START SEARCH FIELD -->
 
@@ -50,6 +53,8 @@
 <!-- START STATE SOLAR TRANSIT IMAGE BUTTONS -->
 
     <div class="statebuttons1">
+        <input type="button" value="Fact Sheet" onclick="window.open('https://eclipse2017.nasa.gov/sites/default/files/publications/2017EclipseAcrossAmericaFlyer_Panels_508.pdf');" class="newButton"/>
+        <input type="button" value="Full Map" onclick="window.open('https://eclipse2017.nasa.gov/eclipse-maps-0');" class="newButton"/>
         <input type="button" value="GA" onclick="window.open('http://tristan.wiki/new/ga.jpg');" class="newButton"/>
         <input type="button" value="IA" onclick="window.open('file:///Users/tristannica/Desktop/Galvanize/Q1%20Project/EclipseStatesMaps/ia.jpg');" class="newButton"/>
         <input type="button" value="ID" onclick="window.open('file:///Users/tristannica/Desktop/Galvanize/Q1%20Project/EclipseStatesMaps/id.jpg');" class="newButton"/>
@@ -164,12 +169,13 @@
     </div>
 
 <!-- END ECLIPSE DATA -->
+
+<iframe width="400" heighth="300" src="http://xjubier.free.fr/en/site_pages/solar_eclipses/TSE_2017_GoogleMapFull.html"></iframe>
 <!--
 <iframe width="400" height="250" src="https://www.youtube.com/embed/MJgXaqW3md8" frameborder="0" allowfullscreen></iframe>
 -->
     <!--Google Map Element-->
     <div id="map"></div>
-
 
     <!--Import Google Maps API-->
     <script async defer
