@@ -9,9 +9,7 @@ This project's aim is to provide the user with the ability to search for locatio
 
 This web application is deployed using Surge and can be found at:
 
-```
 'http://tristan.wiki/new'
-```
 
 ## Acknowledgments
 
