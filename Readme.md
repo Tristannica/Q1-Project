@@ -1,7 +1,7 @@
 # Eclipse Viewer
 
 
-## Getting Started
+## Project Description
 
 This project's aim is to provide the user with the ability to search for location-based viewing information for the upcoming North American solar eclipse on August 21, 2017.
 
